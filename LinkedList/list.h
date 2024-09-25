@@ -14,8 +14,7 @@ public:
   int nodesCounter(Node *);
   void insertAtPosition(int, int);
   void deleteAtPosition(int position);
-  void traversing() {}
-  int findMiddle();
+  void traversing() {};
   void merge(LList &otherList);
   void sort();
 };
