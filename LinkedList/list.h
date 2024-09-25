@@ -2,9 +2,6 @@
 #define LIST_H
 #include "../main.h"
 
-#include <iostream>
-#include <string>
-
 class LList
 {
 public:
