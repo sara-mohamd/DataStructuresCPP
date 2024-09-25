@@ -1,0 +1,23 @@
+#ifndef LIST_H
+#define LIST_H
+#include "../main.h"
+
+#include <iostream>
+#include <string>
+
+class LList
+{
+public:
+  Node *head, *tail;
+  LList() : head(nullptr), tail(nullptr) {};
+
+  int nodesCounter(Node *);
+  void insertAtPosition(int, int);
+  void deleteAtPosition(int position);
+  void traversing() {}
+  int findMiddle();
+  void merge(LList &otherList);
+  void sort();
+};
+
+#endif
