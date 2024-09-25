@@ -78,20 +78,64 @@ void LList::insertAtPosition(int value, int position)
   }
 }
 
-/**
- * Deallocating
- */
 void LList::deleteFirst()
 {
+  // check if list exist or it's already an empty list.
   if (head)
   {
     Node *temp = head; // catch first Node
     head = head->next;
-    delete temp; // deallocating the memory
+    delete temp; // deallocating from the memory
   }
   else
     cout << "It's already Empty List!\n";
 }
+
+void LList::deleteLast()
+{
+  // check if list exist or it's already an empty list.
+  if (tail)
+  {
+    Node *temp = tail;
+    tail = tail->next;
+    delete temp;
+  }
+  else
+    cout << "It's already Empty List!\n";
+}
+
+void LList::deleteNode(int value)
+{
+  // List already empty
+  if (!head)
+  {
+    cout << "It's already an Empty List!\n";
+    return;
+  }
+  Node *temp = head, *prev = nullptr;
+  while (temp)
+  {
+    if (temp->data == value)
+    {
+      if (prev == nullptr)
+      {
+        head = temp->next;
+        return;
+      }
+      else
+      {
+        prev->next = temp->next;
+      }
+      delete temp;
+      cout << "Node with value " << value << " deleted\n";
+      return;
+    }
+    prev = temp;
+    temp = temp->next;
+  }
+  cout << "Number " << value << " not found\n";
+}
+
 void LList::traversing()
 {
   Node *temp = Node::createNode();

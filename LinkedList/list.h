@@ -14,8 +14,6 @@ public:
   void deleteLast();
   void deleteNode(int);
   void traversing() {};
-  void merge(LList &otherList);
-  // void sort();
 };
 
 #endif
