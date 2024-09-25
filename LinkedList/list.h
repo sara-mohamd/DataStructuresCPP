@@ -10,10 +10,12 @@ public:
 
   int nodesCounter(Node *);
   void insertAtPosition(int, int);
-  void deleteAtPosition(int position);
+  void deleteFirst();
+  void deleteLast();
+  void deleteNode(int);
   void traversing() {};
   void merge(LList &otherList);
-  void sort();
+  // void sort();
 };
 
 #endif

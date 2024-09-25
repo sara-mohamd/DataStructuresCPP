@@ -78,6 +78,20 @@ void LList::insertAtPosition(int value, int position)
   }
 }
 
+/**
+ * Deallocating
+ */
+void LList::deleteFirst()
+{
+  if (head)
+  {
+    Node *temp = head; // catch first Node
+    head = head->next;
+    delete temp; // deallocating the memory
+  }
+  else
+    cout << "It's already Empty List!\n";
+}
 void LList::traversing()
 {
   Node *temp = Node::createNode();
